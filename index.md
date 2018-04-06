@@ -1,37 +1,57 @@
-## Welcome to GitHub Pages
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
 
-You can use the [editor on GitHub](https://github.com/liaoql/qlh5/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
+    <script language="JavaScript">
+        <!--
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+        function upbookinto(titleinto){
+            document.bookform.booktitle.value=titleinto
+            document.bookform.bookauth.value=this.auth
+            document.bookform.bookpublisher.value=this.publisher
+        }
 
-### Markdown
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+        function book ( title,auth ,pubilsher){
+            this.title=title
+            this.auth=auth
+            this.publisher=pubilsher
+            this.upinto=upbookinto
+        }
+        }
+                -->
 
-```markdown
-Syntax highlighted code block
 
-# Header 1
-## Header 2
-### Header 3
 
-- Bulleted
-- List
+    </script>
+</head>
+<body>
 
-1. Numbered
-2. List
+<script language="JavaScript">
+    var books = new Array()
+    books[0]=new books("算法与数据结构","liao","qinghua")
+    books[1]= new books("jspxml","qi","qinghua")
+    books[2]=new books("字典","qqq","qqqq")
 
-**Bold** and _Italic_ and `Code` text
+</script>
 
-[Link](url) and ![Image](src)
-```
+<font color="#faebd7" face="隶书" size="7">点击按钮查看信息
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+<form action="" name="bookform">
 
-### Jekyll Themes
+    <input type="button" value="算法与数据结构 "  onclick="books[0].Upinto('算法与数据结构')"/><p>
+    <input type="button" value="jspxml "  onclick="books[1].Upinto('jspxml')"/><p>
+    <input type="button" value="字典 "  onclick="books[2].Upinto('字典')"/><p>
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/liaoql/qlh5/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
 
-### Support or Contact
+    书名：<input type="text" name="booktitle"/><p>
+    作者：<input type="text" name="bookauth"/><p>
+    出版社：<input type="text" name="bookpublisher"/><p>
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+
+</font>
+</form>
+</body>
+</html>
